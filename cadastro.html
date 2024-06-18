@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="cadastro-container">
+        <h2>Cadastro de Usuário</h2>
+        <form id="cadastroForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" oninput="handlePasswordInput(this.value)" required>
+            </div>
+            <div class="form-group">
+                <label for="voucher">Voucher:</label>
+                <input type="text" id="voucher" name="voucher" oninput="this.value = this.value.toUpperCase()" required>
+            </div>
+            <div class="form-group">
+                <label for="perfil">Perfil:</label>
+                <select name="perfil" id="perfil">
+                    <option value="Prata">Prata</option>
+                    <option value="Ouro">Ouro</option>
+                    <option value="Diamante">Diamante</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="observacao">Observações:</label>
+                <textarea id="observacao" name="observacao" rows="10" cols="60"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="telefones">Telefones:</label>
+                <div id="telefonesContainer">
+                    <input type="tel" name="telefone1" maxlength="14" placeholder="Telefone 1 (XX) XXXX-XXXX">
+                </div>
+                <button type="button" id="addTelefone">Adicionar Telefone</button>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
